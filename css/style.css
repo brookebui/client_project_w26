@@ -123,6 +123,7 @@ header {
   background: #00274C;
   color: #ffffff;
   padding: 1.5rem 1.5rem 2rem;
+  text-align: center;
 }
 
 header img {
@@ -191,7 +192,6 @@ nav ul li a[aria-current="page"] {
   text-underline-offset: 3px;
 }
 
-
 /*
    MAIN CONTENT
  */
@@ -239,7 +239,6 @@ section {
   font-weight: 700;
 }
 
-
 /*
    CARD COMPONENT
  */
@@ -281,59 +280,6 @@ section {
   color: #ffffff;
 }
 
-/* Yellow warning card */
-.card-yellow {
-  background: #fff8e1;
-  border-left: 5px solid #e6b800;
-}
-
-
-/*
-   FEATURE LIST — index.html 
- */
-.feature-list {
-  list-style: none;
-  padding: 0;
-}
-
-.feature-list li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.75rem;
-  align-items: start;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid #dce3ea;
-}
-
-.feature-list li::before {
-  content: '✦';
-  color: #e6b800;
-  font-size: 1.1rem;
-  margin-top: 0.15rem;
-}
-
-.feature-list li:last-child {
-  border-bottom: none;
-}
-
-
-/*
-   STEPS LIST — resume.html
- */
-.steps-list {
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.steps-list li {
-  margin-bottom: 0.75rem;
-  background: #f4f6f8;
-  border-radius: 8px;
-  padding: 1rem;
-  border: 1px solid #dce3ea;
-}
-
-
 /*
    FAQ LIST — resume.html
  */
@@ -350,32 +296,6 @@ section {
   border-left: 4px solid #2d5987;
 }
 
-
-/*
-   BUTTON
- */
-.btn {
-  display: inline-block;
-  background: #FFCB05;
-  color: #00274C;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 0.65rem 1.4rem;
-  border-radius: 8px;
-  text-decoration: none;
-  border: 2px solid #FFCB05;
-  margin-top: 0.5rem;
-}
-
-.btn:hover,
-.btn:focus {
-  background: #00274C;
-  color: #FFCB05;
-  border-color: #FFCB05;
-  text-decoration: none;
-}
-
-
 /*
    IMAGES IN MAIN
  */
@@ -384,7 +304,6 @@ main img {
   width: 100%;
   max-width: 600px;
 }
-
 
 /*
    FOOTER
@@ -411,7 +330,6 @@ footer a:hover {
 footer p {
   margin: 0;
 }
-
 
 /*
    REDUCED MOTION ACCESSIBILITY

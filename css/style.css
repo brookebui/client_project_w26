@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap');
+
+/*
+   SKIP TO MAIN CONTENT
+ */
+header > a:first-child {
+  position: absolute;
+  top: -999px;
+  left: 0;
+  z-index: 9999;
+  background: #FFCB05;
+  color: #00274C;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+}
+
+header > a:first-child:focus {
+  top: 0;
+  outline: 3px solid #00274C;
+  outline-offset: 2px;
+}
+
+
+/*
+   BASE STYLES
+ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #1a1a2e;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+a {
+  color: #2d5987;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #00274C;
+}
+
+a:focus {
+  outline: 3px solid #FFCB05;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+
+/*
+   TYPOGRAPHY
+ */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #00274C;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  border-left: 5px solid #FFCB05;
+  padding-left: 1rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  line-height: 1.25;
+  color: #1a3a5c;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+strong {
+  color: #00274C;
+}
+
+
+/*
+   HEADER
+ */
+header {
+  background: #00274C;
+  color: #ffffff;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+header img {
+  width: 140px;
+  margin: 1rem 0;
+  border-radius: 0;
+}
+
+header h1 {
+  border-bottom: 3px solid #FFCB05;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+
+/*
+   NAVIGATION
+ */
+nav {
+  margin: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background: #FFCB05;
+  color: #00274C;
+  border-color: #FFCB05;
+  outline: none;
+}
+
+/* ACTIVE PAGE */
+nav ul li a.active,
+nav ul li a[aria-current="page"] {
+  background: #FFCB05;
+  color: #00274C;
+  border-color: #FFCB05;
+  box-shadow: inset 0 -4px 0 #00274C;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+
+/*
+   MAIN CONTENT
+ */
+main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+
+/*
+   GRID LAYOUTS
+ */
+.start-here-grid,
+.resources-grid,
+.dos-donts-grid,
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.course-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-list li {
+  background: #00274C;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+/*
+   CARD COMPONENT
+ */
+.card {
+  background: #f4f6f8;
+  border: 1px solid #dce3ea;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 39, 76, 0.10);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #00274C;
+}
+
+.card ul {
+  padding-left: 1.25rem;
+}
+
+/* Dark blue card variant */
+.card-blue {
+  background: #00274C;
+  color: #ffffff;
+  border-color: #00274C;
+}
+
+.card-blue h3,
+.card-blue p,
+.card-blue li {
+  color: #ffffff;
+}
+
+.card-blue a {
+  color: #FFCB05;
+}
+
+.card-blue a:hover {
+  color: #ffffff;
+}
+
+/* Yellow warning card */
+.card-yellow {
+  background: #fff8e1;
+  border-left: 5px solid #e6b800;
+}
+
+
+/*
+   FEATURE LIST — index.html 
+ */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #dce3ea;
+}
+
+.feature-list li::before {
+  content: '✦';
+  color: #e6b800;
+  font-size: 1.1rem;
+  margin-top: 0.15rem;
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+
+/*
+   STEPS LIST — resume.html
+ */
+.steps-list {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.steps-list li {
+  margin-bottom: 0.75rem;
+  background: #f4f6f8;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #dce3ea;
+}
+
+
+/*
+   FAQ LIST — resume.html
+ */
+.faq-list {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-list li {
+  background: #f4f6f8;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #2d5987;
+}
+
+
+/*
+   BUTTON
+ */
+.btn {
+  display: inline-block;
+  background: #FFCB05;
+  color: #00274C;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid #FFCB05;
+  margin-top: 0.5rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #00274C;
+  color: #FFCB05;
+  border-color: #FFCB05;
+  text-decoration: none;
+}
+
+
+/*
+   IMAGES IN MAIN
+ */
+main img {
+  margin: 1.5rem 0 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+
+/*
+   FOOTER
+ */
+footer {
+  background: #00274C;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  border-top: 4px solid #FFCB05;
+  margin-top: auto;
+}
+
+footer a {
+  color: #FFCB05;
+  font-weight: 700;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/*
+   REDUCED MOTION ACCESSIBILITY
+ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
